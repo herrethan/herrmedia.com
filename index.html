@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>herrmedia</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="img/favicons/manifest.json">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="app.css" />
+  <script src="modernizr.js"></script>
+</head>
+<body>
+
+<nav class="animated">
+  <h1 class="offscreen">Herrmedia - The developer portfolio of Ethan Herr</h1>
+  <div class="logo animated show"><img src="img/herrmedia.svg" alt="herrmedia" class="loadme"></div> 
+  <!--[if !lte IE 9]><!-->
+  <ul class="din right animated">
+    <li class="left"><a href="javascript:;" data-goto="work">work</a></li>
+    <li class="left"><a href="javascript:;" data-goto="about">about</a></li>
+    <li class="left"><a href="javascript:;" data-goto="contact">contact</a></li>
+  </ul>
+  <!--<![endif]-->
+  <!--[if lte IE 8]>
+    <h1 class="unsupported">Internet Explorer 8 and below not supported. Please <a href="https://windows.microsoft.com/en-us/internet-explorer/download-ie">upgrade your browser</a>.</h1>
+  <![endif]-->
+</nav>
+
+<div class="body-inner full-bleed thumb-hover-ok">
+  <div class="mate full-bleed animated">
+    <img src="img/mate.jpg" alt="" class="offscreen loadme">
+    <video playsinline autoplay muted loop poster="img/mate.jpg" tabindex="-1">
+        <source src="img/mate.mp4" type="video/mp4"/>
+        <!-- <source src="vid/mate.webm" type="video/webm"/> -->
+        <!-- <source src="vid/mate.ogv" type="video/ogg"/> -->
+    </video>
+    <div class="full-bleed video-overlay"></div>
+    <a class="more-arrow" href="javascript:;" data-goto="work" title="scroll down to see more"></a>
+  </div>
+  <section data-target="work" class="work clearfix"></section>
+  <div class="work-previews"></div>
+
+  <section data-target="about" class="about">
+    <h1 class="din">about me</h1>
+    <p class="sans">My name is Ethan Herr. I'm a front end engineer and general digital stuff mover-arounder. I code, I animate, I make videos, I make websites, I make apps, I make music. I don't drink coffee, but enjoy a good cup of maté.</p>
+    <p class="sans">I try to keep my <a href="img/resume.pdf" target="_blank">resume</a> up to date... or, well, at least I did up until 2016 or so.</p>
+    <img src="img/e.jpg" alt="ethan herr">
+    <p class="sans">Truth be told, I'm a recovering Jazz musican and closet composer, and have a <a href="https://soundcloud.com/ethan-herr" target="_blank">collection of recordings</a> that fully indulges this alter-ego. I am passionate about all things artistic, and am certain I will remain conflicted about how best to express this throughout my years. But from day to day, I am obsessed with the minutiae of temporal experience. The way a melody is phrased, the way an element responds to interaction, the way a story draws you in, and the way you can communicate through seemingly familiar means while gradually and quietly dissolving layers of convention, so that at the right moment, that slightly odd or unexpected thing just hits home, awakening some new level of understanding. And if all goes well, you inspire the viewer attempt to achieve something just beyond their own understanding too.</p>
+  </section>
+
+  <section data-target="contact" class="contact">
+    <h1 class="din">contact me</h1>
+    <p class="sans">So here's the rub. Due to overflowing spam, and too much work, I'm not allowing contacts through this site. Please find me through a more "human-centric" means.</p>
+    <form class="sans" id="contactform">
+      <label class="input">
+        Name
+        <span class="error">Please include your name</span>
+        <input class="animated" name="name" type="text">
+      </label>
+      <label class="input">
+        Email
+        <span class="error empty">Please include your email</span>
+        <span class="error invalid">Please enter a valid email</span>
+        <input class="animated" name="email" type="text">
+      </label>
+      <label class="input break">
+        Comments
+        <span class="error">Please include a message</span>
+        <textarea class="animated" name="comments"></textarea>
+      </label>
+      <button class="button din" disabled type="submit">
+        <span class="form-loading-hide">Submit</span>
+        <span class="form-loader">
+          <span class="ellipses"><span>.</span><span>.</span><span>.</span></span>
+        </span>
+      </button>
+      
+      <p class="form-thanks">Thanks! Your message has been sent and I will try to reply shortly.</p>
+      <p class="form-error">Sorry, there was an error sending the message. Please try again later.</p>
+      <p class="form-toofast">Um, that was a questionably fast form entry. Refresh and try again if you are human.</p>
+    </form>
+  </section>
+
+  <footer class="clearfix">
+    <p class="left din">
+      ©<script>document.write(new Date().getFullYear())</script>
+      <span class="break">herrmedia</span>
+    </p>
+    <a href="https://github.com/herrethan/" target="_blank" class="animated social right github" title="github"></a>
+    <a href="https://plus.google.com/u/0/103825326676178565069/about" target="_blank" class="animated social right google" title="google plus"></a>
+    <a href="https://www.linkedin.com/profile/preview?vpa=pub" target="_blank" class="animated social right linkedin" title="linkedin"></a>
+    <a href="https://vimeo.com/herrethan/" target="_blank" class="animated social right vimeo" title="vimeo"></a>
+  </footer>
+</div>
+<!-- <div class="full-bleed preload-overlay">
+  <div class="loader din">
+    <p class="animated">loading</p>
+    <span><span class="percent-loaded animated"></span></span>
+  </div>
+</div> -->
+
+<script src="app.js"></script>
+</body>
+</html>
