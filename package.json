@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3300",
     "build": "next build",
-    "postbuild": "mkdir -p .next/projects && cp -r public/projects/antimetal-demo public/projects/prof .next/projects/",
+    "postbuild": "mkdir -p out/projects && cp -r public/projects/antimetal-demo public/projects/prof out/projects/",
     "start": "next start -p 3300",
     "lint": "next lint"
   },
