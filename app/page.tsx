@@ -11,14 +11,25 @@ import {
 
 export default function Home() {
   const [navRevealed, setNavRevealed] = useState(false);
+  const [navOrange, setNavOrange] = useState(false);
   const [selectedWork, setSelectedWork] = useState<WorkItem | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setNavRevealed(window.scrollY > 50);
+      
+      // Check if we've scrolled past the bottom of the work section
+      const workSection = document.getElementById("work");
+      if (workSection) {
+        const workSectionBottom = workSection.offsetTop + workSection.offsetHeight;
+        const scrollPosition = window.scrollY + window.innerHeight;
+        setNavOrange(scrollPosition >= workSectionBottom);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+    // Call once on mount to set initial state
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -34,7 +45,9 @@ export default function Home() {
     <div className="min-h-screen">
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          navRevealed
+          navOrange
+            ? "bg-orange/80 backdrop-blur-sm shadow-md"
+            : navRevealed
             ? "bg-white/5 backdrop-blur-sm shadow-md"
             : "bg-transparent"
         }`}
@@ -47,11 +60,11 @@ export default function Home() {
               className="h-6 max-w-[5.5em]"
             />
           </div>
-          <ul className="flex font-din gap-4 text-white tracking-wider text-lg opacity-0 animate-[fadeIn_0.5s_ease-in-out_0.5s_forwards]">
+          <ul className="flex font-din gap-4 text-white tracking-wider text-lg">
             <li>
               <button
                 onClick={() => scrollTo("work")}
-                className="uppercase relative hover:opacity-100 opacity-90 transition-opacity after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-[-15px] after:left-0 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+                className="uppercase relative transition-opacity after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-[-15px] after:left-0 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
               >
                 work
               </button>
@@ -59,7 +72,7 @@ export default function Home() {
             <li>
               <button
                 onClick={() => scrollTo("about")}
-                className="uppercase relative hover:opacity-100 opacity-90 transition-opacity after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-[-15px] after:left-0 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+                className="uppercase relative transition-opacity after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-[-15px] after:left-0 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
               >
                 about
               </button>
@@ -67,7 +80,7 @@ export default function Home() {
             <li>
               <button
                 onClick={() => scrollTo("contact")}
-                className="uppercase relative hover:opacity-100 opacity-90 transition-opacity after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-[-15px] after:left-0 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+                className="uppercase relative transition-opacity after:content-[''] after:absolute after:w-full after:h-px after:bg-white after:bottom-[-15px] after:left-0 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
               >
                 contact
               </button>
@@ -233,9 +246,8 @@ export default function Home() {
           contact me
         </h1>
         <p className="font-sans font-light text-base leading-relaxed mb-8">
-          So here's the rub. Due to overflowing spam, and too much work, I'm not
-          allowing contacts through this site. Please find me through a more
-          "human-centric" means.
+          So here's the rub. Due to overflowing spam I'm not
+          allowing contacts through this site. Please find me through a more "human-centric" means.
         </p>
         <form className="text-left max-w-md mx-auto">
           <label className="block mb-6">
@@ -273,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-600 px-4 py-4 flex items-center justify-between flex-wrap">
+      <footer className="bg-gray-800 px-4 py-4 flex items-center justify-between flex-wrap">
         <p className="font-din text-white opacity-50 text-lg">
           ©{new Date().getFullYear()}{" "}
           <span className="block sm:inline">herrmedia</span>

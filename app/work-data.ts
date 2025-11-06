@@ -15,6 +15,26 @@ export interface WorkItem {
 
 export const workItems: WorkItem[] = [
   {
+    thumbtitle: "Goodword",
+    // thumb: "/img/thumbs/reonomy.png",
+    skills: ["React", "Typescript", "Nodejs"],
+    title: "Goodword",
+    subtitle: "AI copilot for professional networking",
+    content: [
+      {
+        text: '0 -> 1 development of an AI copilot tool for professional networking. Allows users to tap into their LinkedIn network to find new connection opportunities, build relationships, and get help with their career.',
+      },
+      {
+        img: "/img/goodword-chat.jpg",
+      },
+      {
+        img: "/img/goodword-home.jpg",
+      },
+      
+      
+    ],
+  },
+  {
     thumbtitle: "UserHub",
     // thumb: "/img/thumbs/reonomy.png",
     skills: ["React", "Typescript", "NextJS"],
@@ -95,32 +115,6 @@ export const workItems: WorkItem[] = [
       },
       {
         img: "/img/work/reonomy.jpg",
-      },
-    ],
-  },
-  {
-    thumbtitle: "Coaching",
-    thumb: "/img/thumbs/ww.png",
-    skills: ["CSS", "Angular", "Django"],
-    title: "Weight Watchers Personal Coaching",
-    content: [
-      {
-        text: "I was lead front end developer for the personal Coaching product at Weight Watchers - a product that connects subscribers with weight loss coaches via email messaging, phone sessions, text, and customized action plans tailored for the member. I managed the UI for both the Coach experience and the Member experience, all built using Angular on top of the Python-based Django framework.",
-      },
-      {
-        text: "The coach-facing experience includes a dashboard calendar of upcoming sessions, a member profile view, a messaging/email page, a profile form page with image uploader, and a session manager page for tracking phone calls and generating action plans.",
-      },
-      {
-        media: "<img class='mx-auto max-w-xl' src='/img/work/coaching-2.jpg' alt='Weight Watchers Coaching Dashboard' />",
-      },
-      {
-        text: "The member-facing experience includes dashboard views for upcoming sessions, recent action plan activity, messaging, and advanced searching and booking tools. Fully optimized for both desktop and mobile devices.",
-      },
-      {
-        img: "/img/work/coaching-1.jpg",
-      },
-      {
-        text: "One of the more complex features of the project was the integration of Teletechs telephone service streaming widget, allowing Coaches and Members to connect securely over the phone via a web interface.",
       },
     ],
   },
@@ -207,6 +201,32 @@ export const workItems: WorkItem[] = [
       },
       {
         media: '<iframe src="https://player.vimeo.com/video/46160039?color=ff9933" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p class="sans"><a href="https://vimeo.com/46160039">Johnny Hiro</a> from <a href="https://vimeo.com/herrethan">Ethan Herr</a> on <a href="https://vimeo.com/">Vimeo</a>.</p>',
+      },
+    ],
+  },
+  {
+    thumbtitle: "Weight Watchers",
+    thumb: "/img/thumbs/ww.png",
+    skills: ["CSS", "Angular", "Django"],
+    title: "Weight Watchers Personal Coaching",
+    content: [
+      {
+        text: "I was lead front end developer for the personal Coaching product at Weight Watchers - a product that connects subscribers with weight loss coaches via email messaging, phone sessions, text, and customized action plans tailored for the member. I managed the UI for both the Coach experience and the Member experience, all built using Angular on top of the Python-based Django framework.",
+      },
+      {
+        text: "The coach-facing experience includes a dashboard calendar of upcoming sessions, a member profile view, a messaging/email page, a profile form page with image uploader, and a session manager page for tracking phone calls and generating action plans.",
+      },
+      {
+        media: "<img class='mx-auto max-w-xl' src='/img/work/coaching-2.jpg' alt='Weight Watchers Coaching Dashboard' />",
+      },
+      {
+        text: "The member-facing experience includes dashboard views for upcoming sessions, recent action plan activity, messaging, and advanced searching and booking tools. Fully optimized for both desktop and mobile devices.",
+      },
+      {
+        img: "/img/work/coaching-1.jpg",
+      },
+      {
+        text: "One of the more complex features of the project was the integration of Teletechs telephone service streaming widget, allowing Coaches and Members to connect securely over the phone via a web interface.",
       },
     ],
   },
