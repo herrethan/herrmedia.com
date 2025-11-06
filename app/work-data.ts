@@ -22,7 +22,7 @@ export const workItems: WorkItem[] = [
     subtitle: "AI copilot for professional networking",
     content: [
       {
-        text: '0 -> 1 development of an AI copilot tool for professional networking. Allows users to tap into their LinkedIn network to find new connection opportunities, build relationships, and get help with their career.',
+        text: '0 -> 1 development of an AI copilot tool for professional networking. Allows users to tap into their LinkedIn network to find new connection opportunities, create notes, events, groups, build relationships, and become better networkers.',
       },
       {
         img: "/img/goodword-chat.jpg",

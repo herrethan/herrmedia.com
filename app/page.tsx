@@ -129,7 +129,7 @@ export default function Home() {
                     {item.skills.map((skill, skillIndex) => (
                       <li
                         key={skillIndex}
-                        className="font-bold text-sm uppercase border rounded-md border-white text-white px-2 py-1"
+                        className="font-bold opacity-70 text-sm uppercase border rounded-full border-white text-white px-2 py-1"
                       >
                         {skill}
                       </li>
