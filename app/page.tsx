@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="bg-gray-900 min-h-screen">
+      <section id="work" className="bg-gray-900">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {workItems.map((item, index) => (
             <article
@@ -122,16 +122,18 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors">
                 <div className="absolute inset-0 flex flex-col items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity p-4">
-                  <h2 className="font-din text-white text-2xl md:text-3xl text-center mb-4 uppercase">
+                  <h2 className="font-din text-white text-3xl xl:text-4xl text-center uppercase">
                     {item.thumbtitle}
                   </h2>
                   <ul className="flex flex-wrap gap-2 justify-center">
                     {item.skills.map((skill, skillIndex) => (
                       <li
                         key={skillIndex}
-                        className="font-bold opacity-70 text-sm uppercase border rounded-full border-white text-white px-2 py-1"
+                        className="font-din flex items-center gap-1 opacity-70 text-xl uppercase text-white"
                       >
+                        <span className="text-4xl opacity-20">{`{`}</span>
                         {skill}
+                        <span className="text-4xl opacity-20">{`}`}</span>
                       </li>
                     ))}
                   </ul>
