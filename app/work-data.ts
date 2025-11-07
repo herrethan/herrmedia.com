@@ -15,26 +15,6 @@ export interface WorkItem {
 
 export const workItems: WorkItem[] = [
   {
-    thumbtitle: "Goodword",
-    // thumb: "/img/thumbs/reonomy.png",
-    skills: ["React", "Typescript", "Nodejs"],
-    title: "Goodword",
-    subtitle: "AI copilot for professional networking",
-    content: [
-      {
-        text: '0 -> 1 development of an AI copilot tool for professional networking. Allows users to tap into their LinkedIn network to find new connection opportunities, create notes, events, groups, build relationships, and become better networkers.',
-      },
-      {
-        img: "/img/goodword-chat.jpg",
-      },
-      {
-        img: "/img/goodword-home.jpg",
-      },
-      
-      
-    ],
-  },
-  {
     thumbtitle: "UserHub",
     // thumb: "/img/thumbs/reonomy.png",
     skills: ["React", "Typescript", "NextJS"],
@@ -89,7 +69,7 @@ export const workItems: WorkItem[] = [
     subtitle: "A room sketch tool built with React and CSS transforms",
     content: [
       {
-        text: 'This was the start of a pet project of mine to see if I could build a 3D room layout builder with only CSS transforms. I got pretty far until I wanted to build a furniture library which would involve more complex geometry. Checkout the <a href="https://github.com/herrethan/room-sketch" target="_blank">Github repo</a>.',
+        text: 'This was the start of a pet project of mine to see if I could build a 3D room layout builder with only CSS transforms. I got pretty far until I wanted to build a furniture library which would involve more complex geometry, and possibly cause unseen amounts of CSS anguish. Checkout the <a href="https://github.com/herrethan/room-sketch" target="_blank">Github repo</a>.',
       },
       {
         media: '<video src="/img/work/room-sketch-example.mp4" autoplay loop muted playsinline onloadedmetadata="this.playbackRate=2.0"></video>'
@@ -116,6 +96,26 @@ export const workItems: WorkItem[] = [
       {
         img: "/img/work/reonomy.jpg",
       },
+    ],
+  },
+  {
+    thumbtitle: "Goodword",
+    // thumb: "/img/thumbs/reonomy.png",
+    skills: ["React", "Typescript", "Nodejs"],
+    title: "Goodword",
+    subtitle: "AI copilot for professional networking",
+    content: [
+      {
+        text: '0 -> 1 development of an AI copilot tool for professional networking. Allows users to tap into their LinkedIn network to find new connection opportunities, create notes, events, groups, build relationships, and become better networkers.',
+      },
+      {
+        img: "/img/goodword-chat.jpg",
+      },
+      {
+        img: "/img/goodword-home.jpg",
+      },
+      
+      
     ],
   },
   // {
